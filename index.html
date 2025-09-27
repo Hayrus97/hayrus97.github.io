@@ -2,71 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Suryah V | Portfolio</title>
+  <title>Suryah Vadivel | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Typed.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>
+    /* Same CSS from before */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; min-height: 100vh; background: #f9fafb; color: #333; }
+    .sidebar { width: 260px; background: linear-gradient(180deg, #111, #222); color: #fff; padding: 30px 20px; height: 100vh; position: fixed; display: flex; flex-direction: column; align-items: center; text-align: center; box-shadow: 2px 0 10px rgba(0,0,0,0.2); }
+    .profile-pic { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid #0078ff; box-shadow: 0 4px 10px rgba(0,0,0,0.3); margin-bottom: 20px; }
+    .sidebar h2 { margin: 10px 0 5px; font-size: 1.6rem; }
+    .sidebar p { font-size: 0.9rem; color: #bbb; margin-bottom: 20px; }
+    .resume-btn { background: #0078ff; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-bottom: 20px; transition: 0.3s; }
+    .resume-btn:hover { background: #005fcc; }
+    .social-links { margin-top: auto; margin-bottom: 20px; }
+    .social-links a { display: inline-block; margin: 0 8px; color: #ccc; text-decoration: none; font-size: 0.95rem; transition: 0.3s; }
+    .social-links a:hover { color: #0078ff; }
+    .main-content { margin-left: 280px; padding: 50px; max-width: 900px; }
+    .main-content h1 { font-size: 2.2rem; margin-bottom: 15px; color: #111827; }
+    .main-content p { font-size: 1.05rem; margin-bottom: 30px; line-height: 1.6; color: #374151; }
+    .projects h2 { font-size: 1.8rem; margin-bottom: 15px; color: #111827; }
+    .project-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; margin: 15px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .project-card h3 { margin: 0; font-size: 1.3rem; }
+    .project-card p { margin: 10px 0 0; font-size: 0.95rem; color: #6B7280; }
+    .project-card a { display: inline-block; margin-top: 10px; color: #0078ff; text-decoration: none; }
+    .project-card a:hover { text-decoration: underline; }
+    .typed-text { color: #0078ff; font-weight: bold; }
+  </style>
 </head>
 <body>
+
   <!-- Sidebar -->
   <div class="sidebar">
-    <img src="assets/profile.jpg" alt="Profile Photo" class="profile-pic">
-    <h2>Suryah V</h2>
+    <img src="assets/profile.jpg" alt="Suryah Vadivel" class="profile-pic">
+    <h2>Suryah Vadivel</h2>
     <p>MS Business Analytics @ UT Austin</p>
-
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="social">
-      <a href="https://github.com/Hayrus97">GitHub</a>
-      <a href="https://linkedin.com/in/suryahv">LinkedIn</a>
-      <a href="mailto:youremail@example.com">Email</a>
+    <a href="assets/Resume.pdf" target="_blank" class="resume-btn">View Resume</a>
+    <div class="social-links">
+      <a href="https://github.com/Hayrus97" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/suryah-v" target="_blank">LinkedIn</a>
+      <a href="mailto:suryahvel@gmail.com">Email</a>
     </div>
-
-    <a href="assets/Resume.pdf" class="resume-btn">View Resume</a>
   </div>
 
-  <!-- Main content -->
-  <div class="content">
-    <section id="home">
-      <h1>Hi, I’m Suryah 👋</h1>
-      <p>Data Analyst & Aspiring Data Scientist | 7 years of experience in Analytics, Software, and Business Development</p>
-    </section>
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Hi, I’m Suryah 👋</h1>
+    <h2><span class="typed-text"></span></h2>
+    <p>I have 7 years of professional experience in software engineering, business development, and data analytics. Currently pursuing my MS in Business Analytics at UT Austin, I specialize in Python, SQL, Power BI, and Machine Learning to solve complex business problems.</p>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I’m currently pursuing my MS in Business Analytics at UT Austin. My professional journey spans Wipro, Byju’s, Scaler, and ARUS Info, where I’ve led analytics projects in ESG, sales, and real estate domains.</p>
-    </section>
-
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul>
-        <li><strong>Data Analyst (Team Lead)</strong> @ ARUS Info – ESG & Real Estate Analytics</li>
-        <li><strong>Senior BDE</strong> @ Scaler – Data-driven growth initiatives</li>
-        <li><strong>Project Engineer</strong> @ Wipro – Telecom software development</li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <p><a href="https://github.com/Hayrus97/crowdsourced-recommender-system">Crowdsourced Beer Recommender</a> — NLP-driven recommendation system using beer reviews.</p>
-      <p>More projects coming soon...</p>
-    </section>
-
-    <section id="skills">
-      <h2>Skills</h2>
-      <p>Python, SQL, Power BI, Machine Learning, NLP, Big Data Analytics</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: youremail@example.com</p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/suryahv">linkedin.com/in/suryahv</a></p>
-    </section>
+    <div class="projects">
+      <h2>Featured Project</h2>
+      <div class="project-card">
+        <h3>Crowdsourced Recommender System</h3>
+        <p>Scraped 10k+ beer reviews, applied NLP methods (Bag-of-Words, Word Vectors, Custom Embeddings) to build an attribute-driven recommender. Compared models and analyzed insights.</p>
+        <a href="https://github.com/Hayrus97/crowdsourced-recommender-system" target="_blank">View Project →</a>
+      </div>
+    </div>
   </div>
+
+  <!-- Typed.js Script -->
+  <script>
+    var typed = new Typed('.typed-text', {
+      strings: ["Data Analyst", "Data Scientist", "Problem Solver"],
+      typeSpeed: 60,
+      backSpeed: 40,
+      backDelay: 1500,
+      loop: true
+    });
+  </script>
+
 </body>
 </html>
