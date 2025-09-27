@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crowdsourced Beer Recommendation System | Suryah V</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; background-color: #f9f9f9; color: #333; }
+    h1, h2 { color: #2C3E50; }
+    a { color: #2980B9; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 800px; margin: auto; background: #fff; padding: 30px; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 8px; }
+    .section { margin-bottom: 30px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Crowdsourced Beer Recommendation System</h1>
+    <p><strong>Author:</strong> Suryah V | Master’s in Business Analytics @ UT Austin</p>
+    
+    <div class="section">
+      <h2>Overview</h2>
+      <p>
+        This project builds the foundation of a crowdsourced recommendation system by scraping and analyzing beer reviews from BeerAdvocate.
+        The goal is to recommend beers based on user-specified attributes such as “fruity,” “crisp,” or “robust,” going beyond simple popularity rankings.
+      </p>
+    </div>
+    
+    <div class="section">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Scraped 8–10k reviews across ~250 beers using Selenium and BeautifulSoup</li>
+        <li>Cleaned and structured dataset into product, review, and rating fields</li>
+        <li>Implemented multiple recommendation approaches:
+          <ul>
+            <li>Bag-of-Words + Cosine Similarity + Sentiment</li>
+            <li>Pre-trained Word Embeddings (SpaCy)</li>
+            <li>Custom Embeddings (SpaCy/Gensim)</li>
+          </ul>
+        </li>
+        <li>Compared attribute-based recommendations with simple popularity-based rankings</li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h2>Results</h2>
+      <p>
+        Attribute-driven recommenders produced more relevant results than popularity rankings. 
+        Custom embeddings captured domain-specific vocabulary, while pre-trained embeddings provided semantic depth.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Repository</h2>
+      <p>
+        Full code and dataset available on GitHub:  
+        <a href="https://github.com/Hayrus97/crowdsourced-recommender-system" target="_blank">
+          Crowdsourced Recommender Repository
+        </a>
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Future Work</h2>
+      <ul>
+        <li>Add an input system where users can enter desired attributes directly</li>
+        <li>Decide on the best recommendation approach (Bag-of-Words, Pre-trained Embeddings, or Custom Embeddings) to showcase</li>
+        <li>Deploy an interactive demo using Streamlit for hands-on testing</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
