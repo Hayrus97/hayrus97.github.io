@@ -4,65 +4,88 @@
   <meta charset="UTF-8">
   <title>Suryah Vadivel | Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Typed.js Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <style>
-    /* Same CSS from before */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; min-height: 100vh; background: #f9fafb; color: #333; }
-    .sidebar { width: 260px; background: linear-gradient(180deg, #111, #222); color: #fff; padding: 30px 20px; height: 100vh; position: fixed; display: flex; flex-direction: column; align-items: center; text-align: center; box-shadow: 2px 0 10px rgba(0,0,0,0.2); }
-    .profile-pic { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid #0078ff; box-shadow: 0 4px 10px rgba(0,0,0,0.3); margin-bottom: 20px; }
-    .sidebar h2 { margin: 10px 0 5px; font-size: 1.6rem; }
-    .sidebar p { font-size: 0.9rem; color: #bbb; margin-bottom: 20px; }
-    .resume-btn { background: #0078ff; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-bottom: 20px; transition: 0.3s; }
-    .resume-btn:hover { background: #005fcc; }
-    .social-links { margin-top: auto; margin-bottom: 20px; }
-    .social-links a { display: inline-block; margin: 0 8px; color: #ccc; text-decoration: none; font-size: 0.95rem; transition: 0.3s; }
-    .social-links a:hover { color: #0078ff; }
-    .main-content { margin-left: 280px; padding: 50px; max-width: 900px; }
-    .main-content h1 { font-size: 2.2rem; margin-bottom: 15px; color: #111827; }
-    .main-content p { font-size: 1.05rem; margin-bottom: 30px; line-height: 1.6; color: #374151; }
-    .projects h2 { font-size: 1.8rem; margin-bottom: 15px; color: #111827; }
-    .project-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; margin: 15px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-    .project-card h3 { margin: 0; font-size: 1.3rem; }
-    .project-card p { margin: 10px 0 0; font-size: 0.95rem; color: #6B7280; }
-    .project-card a { display: inline-block; margin-top: 10px; color: #0078ff; text-decoration: none; }
-    .project-card a:hover { text-decoration: underline; }
-    .typed-text { color: #0078ff; font-weight: bold; }
-  </style>
 </head>
 <body>
 
   <!-- Sidebar -->
-  <div class="sidebar">
+  <aside class="sidebar">
     <img src="assets/profile.jpg" alt="Suryah Vadivel" class="profile-pic">
     <h2>Suryah Vadivel</h2>
     <p>MS Business Analytics @ UT Austin</p>
     <a href="assets/Resume.pdf" target="_blank" class="resume-btn">View Resume</a>
+
+    <!-- Navigation -->
+    <nav class="nav-links">
+      <a href="#home"><i class="fas fa-home"></i> Home</a>
+      <a href="#about"><i class="fas fa-user"></i> About</a>
+      <a href="#experience"><i class="fas fa-file-alt"></i> Experience</a>
+      <a href="#projects"><i class="fas fa-database"></i> Projects</a>
+      <a href="#skills"><i class="fas fa-book"></i> Skills</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+
+    <!-- Socials -->
     <div class="social-links">
-      <a href="https://github.com/Hayrus97" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/suryah-v" target="_blank">LinkedIn</a>
-      <a href="mailto:suryahvel@gmail.com">Email</a>
+      <a href="https://github.com/Hayrus97" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/suryah-v" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:suryahvel@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
-  </div>
+  </aside>
 
   <!-- Main Content -->
-  <div class="main-content">
-    <h1>Hi, I’m Suryah 👋</h1>
-    <h2><span class="typed-text"></span></h2>
-    <p>I have 7 years of professional experience in software engineering, business development, and data analytics. Currently pursuing my MS in Business Analytics at UT Austin, I specialize in Python, SQL, Power BI, and Machine Learning to solve complex business problems.</p>
+  <main class="main-content">
 
-    <div class="projects">
-      <h2>Featured Project</h2>
+    <!-- Home -->
+    <section id="home">
+      <h1>Hi, I’m Suryah 👋</h1>
+      <h2><span class="typed-text"></span></h2>
+      <p>I have 7 years of professional experience in software engineering, business development, and data analytics. Currently pursuing my MS in Business Analytics at UT Austin, I specialize in Python, SQL, Power BI, and Machine Learning to solve complex business problems.</p>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About</h2>
+      <p>I’m passionate about combining data-driven decision-making with business strategy. I aim to help organizations leverage analytics for growth and efficiency.</p>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li><b>Team Lead & Data Analyst @ ARUS Info</b> – ESG reporting, SQL, Python, Power BI</li>
+        <li><b>Business Development @ Scaler & Byju’s</b> – Data-driven strategy, client handling</li>
+        <li><b>Software Engineer @ Wipro</b> – Wi-Fi systems programming (Awarded Rookie of the Year)</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
       <div class="project-card">
         <h3>Crowdsourced Recommender System</h3>
         <p>Scraped 10k+ beer reviews, applied NLP methods (Bag-of-Words, Word Vectors, Custom Embeddings) to build an attribute-driven recommender. Compared models and analyzed insights.</p>
         <a href="https://github.com/Hayrus97/crowdsourced-recommender-system" target="_blank">View Project →</a>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- Typed.js Script -->
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <p>Python, SQL, Power BI, R, Machine Learning, Data Analytics, Optimization, Business Strategy</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:suryahvel@gmail.com">suryahvel@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/suryah-v" target="_blank">linkedin.com/in/suryah-v</a></p>
+    </section>
+
+  </main>
+
+  <!-- Typed.js -->
   <script>
     var typed = new Typed('.typed-text', {
       strings: ["Data Analyst", "Data Scientist", "Problem Solver"],
