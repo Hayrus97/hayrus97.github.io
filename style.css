@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #111;
+  color: #fff;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+}
+
+.sidebar h2, .sidebar p {
+  text-align: center;
+}
+
+.profile-pic {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+}
+
+.sidebar nav {
+  margin-top: 20px;
+}
+
+.sidebar nav a {
+  display: block;
+  color: #ccc;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.sidebar nav a:hover {
+  background: #333;
+  color: #fff;
+}
+
+.resume-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  background: #0078ff;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Main content */
+.content {
+  margin-left: 270px;
+  padding: 40px;
+}
+
+section {
+  margin-bottom: 50px;
+}
