@@ -1,100 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
   <title>Suryah Vadivel | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <meta content="Data Analyst | MSBA @ UT Austin | ESG & Power BI Enthusiast" name="description">
+  <meta content="Data Analytics, Business Analytics, ESG, Power BI, SQL, Python, UT Austin" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/icon.png" rel="icon">
+  <link href="assets/img/icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,500,600,700|Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <img src="assets/profile.jpg" alt="Suryah Vadivel" class="profile-pic">
-    <h2>Suryah Vadivel</h2>
-    <p>MS Business Analytics @ UT Austin</p>
-    <a href="assets/Resume.pdf" target="_blank" class="resume-btn">View Resume</a>
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-    <!-- Navigation -->
-    <nav class="nav-links">
-      <a href="#home"><i class="fas fa-home"></i> Home</a>
-      <a href="#about"><i class="fas fa-user"></i> About</a>
-      <a href="#experience"><i class="fas fa-file-alt"></i> Experience</a>
-      <a href="#projects"><i class="fas fa-database"></i> Projects</a>
-      <a href="#skills"><i class="fas fa-book"></i> Skills</a>
-      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-    </nav>
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
 
-    <!-- Socials -->
-    <div class="social-links">
-      <a href="https://github.com/Hayrus97" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/suryah-v" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:suryahvel@gmail.com"><i class="fas fa-envelope"></i></a>
+      <div class="profile">
+        <img src="assets/img/profile_img_small.jpg" alt="need to be changed" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Suryah Vadivel</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="need to be changed" class="github"><i class="bx bxl-github"></i></a>
+          <a href="need to be changed" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="mailto:need to be changed" class="email"><i class="bx bx-envelope"></i></a>
+        </div>
+        <a href="need to be changed" target="_blank"><button type="submit">View Resume</button></a>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Experience</span></a></li>
+          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Projects</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Skills</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav>
     </div>
-  </aside>
+  </header>
 
-  <!-- Main Content -->
-  <main class="main-content">
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <p>Hi! Welcome to my profile. I'm</p>
+      <h1>Suryah Vadivel</h1>
+      <br><br>
+      <p><span class="typed" data-typed-items="Data Analyst, Team Lead at ARUS Info, ESG Reporting Specialist, MSBA @ UT Austin, Power BI & Python Enthusiast"></span></p>
+    </div>
+  </section>
 
-    <!-- Home -->
-    <section id="home">
-      <h1>Hi, I’m Suryah 👋</h1>
-      <h2><span class="typed-text"></span></h2>
-      <p>I have 7 years of professional experience in software engineering, business development, and data analytics. Currently pursuing my MS in Business Analytics at UT Austin, I specialize in Python, SQL, Power BI, and Machine Learning to solve complex business problems.</p>
-    </section>
+  <main id="main">
 
-    <!-- About -->
-    <section id="about">
-      <h2>About</h2>
-      <p>I’m passionate about combining data-driven decision-making with business strategy. I aim to help organizations leverage analytics for growth and efficiency.</p>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul>
-        <li><b>Team Lead & Data Analyst @ ARUS Info</b> – ESG reporting, SQL, Python, Power BI</li>
-        <li><b>Business Development @ Scaler & Byju’s</b> – Data-driven strategy, client handling</li>
-        <li><b>Software Engineer @ Wipro</b> – Wi-Fi systems programming (Awarded Rookie of the Year)</li>
-      </ul>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project-card">
-        <h3>Crowdsourced Recommender System</h3>
-        <p>Scraped 10k+ beer reviews, applied NLP methods (Bag-of-Words, Word Vectors, Custom Embeddings) to build an attribute-driven recommender. Compared models and analyzed insights.</p>
-        <a href="https://github.com/Hayrus97/crowdsourced-recommender-system" target="_blank">View Project →</a>
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <br>
+            <img src="assets/img/about_img.jpg" class="img-fluid" alt="need to be changed">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <div class="section-title">
+              <h2>A Little About Me</h2>
+            </div>
+            <div class="row">
+              <div class="col-lg-5">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Location:</strong> <span>Austin, TX, USA</span></li>
+                </ul>
+              </div>
+            </div>
+            <p class="fst-italic">
+              <li>Currently pursuing my Master’s in Business Analytics at <strong>UT Austin (McCombs)</strong>, focusing on Machine Learning, Optimization, and Big Data.</li>
+              <br>
+              <li>Worked as a <strong>Data Analyst → Team Lead</strong> at ARUS Info, specializing in ESG reporting and analytics for global clients. Earned an onsite opportunity in Singapore.</li>
+              <br>
+              <li>Previously worked in <strong>Scaler & Byju’s</strong> (business development roles) and <strong>Wipro</strong> (software engineering, Wi-Fi boards for telecom). Recognized as #1 Employee and Rookie of the Year.</li>
+              <br>
+              <li>Freelanced for <strong>Classic Polo</strong>, building an ETL-based retail finance tracking system.</li>
+              <br>
+              <li>I’m passionate about blending technical analytics with business strategy, aiming to expand my family’s retail business in the future.</li>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <p>Python, SQL, Power BI, R, Machine Learning, Data Analytics, Optimization, Business Strategy</p>
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Where I've Worked</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h4 class="resume-title">ARUS Info</h4>
+            <p><em>Data Analyst → Team Lead</em></p>
+            <h5>Feb 2023 – Present</h5>
+            <ul>
+              <li>Led ESG reporting and analytics for GLP (Singapore), delivering strong results and securing a 2-month onsite assignment.</li>
+              <li>Promoted to Team Lead in 2024; managed a team of analysts, overseeing SQL, Python, VBA, and Power BI pipelines.</li>
+              <li>Built client-facing dashboards and automated ETL pipelines to streamline reporting.</li>
+            </ul>
+
+            <h4 class="resume-title">Scaler</h4>
+            <p><em>Senior Business Development Executive</em></p>
+            <h5>2021 – Dec 2022</h5>
+            <ul>
+              <li>Used data insights to drive 40% business growth.</li>
+              <li>Awarded #1 Employee across 3 cohorts.</li>
+            </ul>
+
+            <h4 class="resume-title">Byju's</h4>
+            <p><em>Business Development Executive</em></p>
+            <h5>2020 – 2021</h5>
+            <ul>
+              <li>Strengthened client handling and business analytics skills while scaling operations.</li>
+            </ul>
+
+            <h4 class="resume-title">Wipro</h4>
+            <p><em>Project Engineer</em></p>
+            <h5>2018 – 2020</h5>
+            <ul>
+              <li>Developed programming for Wi-Fi boards (Airtel, Vodafone).</li>
+              <li>Received “Rookie of the Year” award.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:suryahvel@gmail.com">suryahvel@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/suryah-v" target="_blank">linkedin.com/in/suryah-v</a></p>
+    <!-- ======= Projects Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured Projects</h2>
+        </div>
+
+        <div class="row">
+          <a href="need to be changed" target="_blank" class="col-lg-6 col-md-6 icon-box" data-aos="fade-up">
+            <div class="project-bg">
+              <div class="icon"><i class="bi bi-bar-chart"></i></div>
+              <h4 class="title">Austin Housing Price Prediction</h4>
+              <ul class="description">
+                <li>Built regression trees, bagging, random forests, and BART models to predict log(latestPrice).</li>
+                <li>Reported errors in terms of actual prices, demonstrating value of feature engineering.</li>
+              </ul>
+            </div>
+          </a>
+
+          <a href="need to be changed" target="_blank" class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-bg">
+              <div class="icon"><i class="bi bi-graph-up"></i></div>
+              <h4 class="title">ESG Analytics Dashboard</h4>
+              <ul class="description">
+                <li>Developed Power BI dashboards for GLP’s ESG performance across 10+ countries.</li>
+                <li>Automated SQL + Python ETL pipelines to feed dashboards with real-time updates.</li>
+              </ul>
+            </div>
+          </a>
+
+          <a href="need to be changed" target="_blank" class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-bg">
+              <div class="icon"><i class="bi bi-cash"></i></div>
+              <h4 class="title">Classic Polo Retail Analytics</h4>
+              <ul class="description">
+                <li>Designed a system to calculate daily expenses, profits, and compare quarterly performance.</li>
+                <li>Handled ETL process for sales, expenses, and brand data.</li>
+              </ul>
+            </div>
+          </a>
+
+          <a href="need to be changed" target="_blank" class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-bg">
+              <div class="icon"><i class="bi bi-cart"></i></div>
+              <h4 class="title">Olist E-commerce Churn</h4>
+              <ul class="description">
+                <li>Applied churn analysis and association rule mining on Olist dataset.</li>
+                <li>Generated actionable customer retention strategies.</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
 
+    <!-- ======= Skills Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="skills container">
+        <div class="section-title">
+          <h2>Technology Stacks</h2>
+        </div>
+
+        <div class="row skills-content">
+          <div class="col-lg-8" data-aos="fade-right">
+            <button type="submit">SQL</button>
+            <button type="submit">Python</button>
+            <button type="submit">Power BI</button>
+            <button type="submit">Excel VBA</button>
+            <button type="submit">Databricks</button>
+            <button type="submit">Git</button>
+          </div>
+          <div class="col-lg-8" data-aos="fade-right" data-aos-delay="100">
+            <button type="submit">R</button>
+            <button type="submit">Scikit-learn</button>
+            <button type="submit">Random Forests</button>
+            <button type="submit">BART</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="section-title" data-aos="fade-in">
+          <h3>Digital Badges and Certifications</h3>
+        </div>
+        <p>need to be changed</p>
+      </div>
+    </section>
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact Me</h2>
+          <p>Let’s connect! Whether you’d like to discuss analytics, collaboration, or just have a coffee chat, feel free to reach out.</p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>need to be changed</p>
+              </div>
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Austin, TX, USA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Typed.js -->
-  <script>
-    var typed = new Typed('.typed-text', {
-      strings: ["Data Analyst", "Data Scientist", "Problem Solver"],
-      typeSpeed: 60,
-      backSpeed: 40,
-      backDelay: 1500,
-      loop: true
-    });
-  </script>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
