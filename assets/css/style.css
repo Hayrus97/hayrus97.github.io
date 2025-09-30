@@ -1101,3 +1101,12 @@ section {
   color: #ddd;
   margin: 0;
 }
+
+.skill-heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #f9b600;  /* yellow to match icons */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
