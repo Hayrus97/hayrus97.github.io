@@ -1054,3 +1054,50 @@ section {
   background-color: #fff;
   border-color: #ccc
 }
+
+
+/*--------------------------------------------------------------
+# Custom Skills Section (Circle Icons)
+--------------------------------------------------------------*/
+.skills .skill-box {
+  background: #0b0f19;  /* dark background */
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.skills .skill-box:hover {
+  background: #111827;
+  transform: translateY(-5px);
+}
+
+.skills .skill-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #f9b600; /* yellow circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px auto;
+}
+
+.skills .skill-icon i {
+  font-size: 30px;
+  color: #000; /* black icons */
+}
+
+.skills .skill-box h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.skills .skill-box p {
+  font-size: 14px;
+  color: #ddd;
+  margin: 0;
+}
