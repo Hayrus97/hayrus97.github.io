@@ -10,10 +10,10 @@
   <meta content="Data Analytics, Business Analytics, ESG, Power BI, SQL, Python, UT Austin" name="keywords">
 
   <!-- Favicons -->
-<link rel="icon" type="image/png" sizes="32x32" href="assets/img/batman_logo.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/img/batman_logo.png">
-<link rel="shortcut icon" href="assets/img/batman_logo.ico">
-<link rel="apple-touch-icon" href="assets/img/batman_logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/batman_logo_1.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/batman_logo_1.png">
+<link rel="shortcut icon" href="assets/img/batman_logo_1.ico">
+<link rel="apple-touch-icon" href="assets/img/batman_logo_1.png">
 
 
   <!-- Google Fonts -->
@@ -355,14 +355,17 @@
   <h3 class="skill-heading">Data Science Methods</h3>
   <ul class="method-list">
     <li>EDA</li>
-    <li>Segmentation / Clustering</li>
-    <li>Cohort</li>
+    <!-- <li>Segmentation / Clustering</li>
+    <li>Cohort</li> -->
     <li>Linear Regression</li>
     <li>Logistic Regression</li>
-    <li>Statistics</li>
-    <li>A/B Testing</li>
+    <li>Random Forest</li>
+    <li>Lasso/Ridge Regression</li>
+    <li>K Nearest neighbours</li>
+    <!-- <li>Statistics</li>
+    <li>A/B Testing</li> -->
     <li>ANOVA</li>
-    <li>(Post-Hoc) T-Test</li>
+    <!-- <li>(Post-Hoc) T-Test</li> -->
   </ul>
 </div>
 
@@ -373,18 +376,15 @@
 
 
 
-      <div class="container">
+      <!-- <div class="container">
         <div class="section-title" data-aos="fade-in">
           <h3>Digital Badges and Certifications</h3>
         </div>
         <p>need to be changed</p>
       </div>
-    </section> 
+    </section>  -->
 
-
-    
-
-    <!-- ======= Contact Section ======= -->
+<!-- ======= Contact Section ======= -->
 <section id="contact" class="contact">
   <div class="container">
 
@@ -396,18 +396,19 @@
 
     <div class="row" data-aos="fade-in">
 
+      <!-- Contact Info Section -->
       <div class="col-lg-5 d-flex align-items-stretch">
         <div class="info">
           <div class="phone">
             <i class="bi bi-phone"></i>
             <h4>Call or WhatsApp:</h4>
-            <p>+1 (737) 409-3006 <!-- replace with your number --></p>
+            <p>+1 (737) 409-3006</p>
           </div>
 
           <div class="email">
             <i class="bi bi-envelope"></i>
             <h4>Email:</h4>
-            <p>suryahvadivel@example.com <!-- replace with your email --></p>
+            <p>suryahvadivel@example.com</p>
           </div>
 
           <div class="address">
@@ -422,8 +423,9 @@
         </div>
       </div>
 
+      <!-- Contact Form Section -->
       <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+        <form id="contact-form" action="https://formspree.io/f/mdkwyelK" method="POST">
           <div class="row">
             <div class="form-group col-md-6">
               <label for="name">Your Name</label>
@@ -442,30 +444,74 @@
             <label for="message">Message</label>
             <textarea class="form-control" name="message" rows="10" required></textarea>
           </div>
-          <div class="text-center"><button type="submit">Send Message</button></div>
+          <div class="text-center mt-3">
+            <button type="submit" class="btn btn-primary" style="background-color:#f5c518; border:none; color:black; font-weight:600;">Send Message</button>
+          </div>
+          <p id="form-status" style="margin-top:15px; text-align:center; font-weight:600;"></p>
         </form>
       </div>
-
     </div>
   </div>
+
+  <!-- Formspree Integration Script -->
+  <script>
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      const data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          status.textContent = "✅ Message sent successfully! I’ll get back to you soon.";
+          status.style.color = "#111";
+          status.style.backgroundColor = "#f5c518";
+          status.style.padding = "10px 15px";
+          status.style.borderRadius = "8px";
+          status.style.transition = "all 1.5s ease-in-out";
+          form.reset();
+          setTimeout(() => { status.style.opacity = "0"; }, 4000);
+        } else {
+          status.textContent = "⚠️ Oops! Something went wrong. Please try again.";
+          status.style.color = "#dc3545";
+        }
+      }).catch(() => {
+        status.textContent = "⚠️ Network error. Please check your connection.";
+        status.style.color = "#dc3545";
+      });
+    }
+
+    form.addEventListener("submit", handleSubmit);
+  </script>
+
 </section>
 <!-- End Contact Section -->
 
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+  <i class="bi bi-arrow-up-short"></i>
+</a>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/purecounter/purecounter.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/typed.js/typed.min.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
 </body>
 </html>
+
+    
+
+   
