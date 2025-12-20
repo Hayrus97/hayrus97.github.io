@@ -1123,3 +1123,9 @@ section {
   z-index: 3;
 }
 
+/* FORCE hero to be true full-screen (template has section padding!) */
+#hero {
+  padding: 0 !important;
+  position: relative;
+  height: 100vh;
+}
