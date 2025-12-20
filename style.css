@@ -1056,37 +1056,60 @@ section {
 }
 
 
-
-/* ===== Hero Offer Section ===== */
-
-.hero-offer {
-  margin-top: 25px;
-  max-width: 720px;
-  text-align: center;
-  color: #e0e0e0;
+/*--------------------------------------------------------------
+# hero
+--------------------------------------------------------------*/
+/* Make hero full height */
+#hero {
+  height: 100vh;
+  position: relative;
 }
 
+/* Stack hero content vertically */
+#hero .hero-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Push hero-offer to bottom */
+.hero-offer {
+  margin-top: auto;              /* 👈 THIS pushes it to the end */
+  margin-bottom: 40px;           /* spacing from bottom */
+  max-width: 760px;
+  padding: 16px 20px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.45);
+
+  color: #ffffff;                /* 👈 force white text */
+}
+
+/* Headline */
 .hero-offer h4 {
   color: #ffffff;
   font-size: 16px;
   margin-bottom: 10px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
 }
 
+/* List reset */
 .hero-offer ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* Bullet text */
 .hero-offer li {
-  font-size: 14.5px;
+  color: #ffffff;                /* 👈 ensure white */
+  font-size: 14px;
   line-height: 1.6;
 }
 
-.hero-tagline {
-  margin-top: 10px;
-  font-size: 13px;
-  color: #b0bec5;
+/* Strong emphasis */
+.hero-offer strong {
+  color: #ffffff;
 }
 
