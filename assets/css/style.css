@@ -1171,3 +1171,59 @@ section {
 }
 
 
+/* ===== Hero: blur background ONLY, keep text sharp ===== */
+#hero{
+  position: relative;
+  height: 100vh;
+  padding: 0 !important;
+
+  /* IMPORTANT: remove/override any direct background on #hero */
+  background: none !important;
+
+  overflow: hidden; /* keeps blur from spilling outside */
+}
+
+/* Background image layer (blurred) */
+#hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url("../img/home-bg.jpg") center/cover no-repeat;
+  filter: blur(8px);
+
+  /* blur creates transparent edges; scale fixes that */
+  transform: scale(1.08);
+
+  z-index: 0;
+}
+
+/* Dark overlay layer (NOT blurred) */
+#hero::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(3, 18, 43, 0.55);
+  z-index: 1;
+}
+
+/* Content stays sharp above both layers */
+#hero .hero-container{
+  position: relative;
+  z-index: 2;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Keep your center + offer logic */
+.hero-center { margin: auto 0; }
+
+#hero .hero-offer{
+  position: relative;
+  z-index: 2;
+}
