@@ -213,13 +213,12 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/home-bg.jpg") bottom left;
-  background-size: cover;
+  /* background: url("../img/home-bg.jpg") bottom left;
+  background-size: cover; */
 }
 #hero:before {
   content: "";
   background: rgba(3, 18, 43, 0.432);
-  backdrop-filter: blur(2px);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1110,105 +1109,37 @@ section {
   text-align: center;
 }
 
-/* ===== HERO FINAL LAYOUT FIX ===== */
+/* ===== HERO (Single Final Version) ===== */
 
-#hero {
-  padding: 0 !important;
-  height: 100vh;
-  position: relative;
-}
-
-#hero .hero-container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-/* CENTER the main content */
-.hero-center {
-  margin: auto 0;   /* 👈 This keeps name + role perfectly centered */
-}
-
-/* BOTTOM offer */
-.hero-offer {
-  margin-bottom: 24px;
-
-  max-width: 820px;
-  width: calc(100% - 40px);
-  padding: 18px 22px;
-
-  background: rgba(0, 0, 0, 0.75);
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.08);
-
-  color: #fff;
-  position: relative;
-  z-index: 3;
-}
-
-.hero-offer h4,
-.hero-offer li,
-.hero-offer strong {
-  color: #fff;
-}
-
-.hero-offer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.hero-offer li {
-  font-size: 14.5px;
-  line-height: 1.7;
-}
-
-/* Reduce excessive spacing from template */
-#hero p {
-  margin-bottom: 18px !important;
-}
-
-
-/* ===== Hero: blur background ONLY, keep text sharp ===== */
 #hero{
-  position: relative;
+  width: 100%;
   height: 100vh;
   padding: 0 !important;
-
-  /* IMPORTANT: remove/override any direct background on #hero */
-  background: none !important;
-
-  overflow: hidden; /* keeps blur from spilling outside */
+  position: relative;
+  overflow: hidden;
 }
 
-/* Background image layer (blurred) */
+/* Blurred background image only */
 #hero::before{
   content: "";
   position: absolute;
   inset: 0;
-
   background: url("../img/home-bg.jpg") center/cover no-repeat;
   filter: blur(8px);
-
-  /* blur creates transparent edges; scale fixes that */
   transform: scale(1.08);
-
   z-index: 0;
 }
 
-/* Dark overlay layer (NOT blurred) */
+/* Dark overlay (not blurred) */
 #hero::after{
   content: "";
   position: absolute;
   inset: 0;
-
   background: rgba(3, 18, 43, 0.55);
   z-index: 1;
 }
 
-/* Content stays sharp above both layers */
+/* Content on top, sharp */
 #hero .hero-container{
   position: relative;
   z-index: 2;
@@ -1218,12 +1149,46 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  min-width: 300px;
 }
 
-/* Keep your center + offer logic */
-.hero-center { margin: auto 0; }
-
-#hero .hero-offer{
-  position: relative;
-  z-index: 2;
+/* Keep main content centered */
+.hero-center{
+  margin: auto 0;
 }
+
+/* Offer at bottom */
+.hero-offer{
+  margin-bottom: 24px;
+  max-width: 820px;
+  width: calc(100% - 40px);
+  padding: 18px 22px;
+
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+.hero-offer h4,
+.hero-offer li,
+.hero-offer strong{
+  color: #fff;
+}
+
+.hero-offer ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-offer li{
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+
+/* Reduce excessive spacing */
+#hero p{
+  margin-bottom: 18px !important;
+}
+
