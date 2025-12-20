@@ -207,48 +207,53 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
 }
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-
 /* ==================================================
-   HERO – FINAL SINGLE SOURCE OF TRUTH
+   HERO – SINGLE FINAL (Background behind, text always on top)
    ================================================== */
 
-#hero {
+#hero{
   width: 100%;
   height: 100vh;
   padding: 0 !important;
+  margin: 0 !important;
   position: relative;
+
   overflow: hidden;
+
+  /* KEY: creates a stacking context so z-index works predictably */
+  isolation: isolate;
 }
 
-/* ---------- Blurred background image ONLY ---------- */
-#hero::before {
+/* Blurred background image (always BEHIND content) */
+#hero::before{
   content: "";
   position: absolute;
   inset: 0;
 
   background: url("../img/home-bg.jpg") center / cover no-repeat;
   filter: blur(8px);
-  transform: scale(1.08); /* prevents blur edges */
+  transform: scale(1.08);
 
-  z-index: 0;
+  z-index: -2;              /* behind everything in #hero */
+  pointer-events: none;     /* never blocks clicks */
 }
 
-/* ---------- Dark overlay (NOT blurred) ---------- */
-#hero::after {
+/* Dark overlay (still behind content) */
+#hero::after{
   content: "";
   position: absolute;
   inset: 0;
+
   background: rgba(3, 18, 43, 0.55);
-  z-index: 1;
+
+  z-index: -1;              /* above bg, below text */
+  pointer-events: none;
 }
 
-/* ---------- Main hero container (sharp) ---------- */
-#hero .hero-container {
+/* Content (always ON TOP) */
+#hero .hero-container{
   position: relative;
-  z-index: 2;
+  z-index: 1;
 
   height: 100%;
   min-width: 300px;
@@ -259,21 +264,23 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-/* ---------- Centered hero text ---------- */
-.hero-center {
+/* Center block */
+.hero-center{
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 16px;
 }
 
-.hero-center p {
+/* Typography */
+.hero-center p{
   color: #fff;
   font-size: 32px;
-  margin-bottom: 18px;
+  margin: 0 0 18px 0;
 }
 
-.hero-center h1 {
+.hero-center h1{
   margin: 0 0 12px 0;
   font-size: 82px;
   font-weight: 100;
@@ -281,58 +288,50 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-.hero-center span {
+.hero-center span{
+  color: #fff;
   border-bottom: 3px solid #149ddd;
   padding-bottom: 4px;
 }
 
-/* ---------- Bottom offer card ---------- */
-.hero-offer {
-  margin-bottom: 24px;
-
+/* Bottom offer card */
+.hero-offer{
+  margin: 0 20px 24px;
   max-width: 820px;
   width: calc(100% - 40px);
   padding: 18px 22px;
 
   background: rgba(0, 0, 0, 0.75);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255,255,255,0.08);
 
   color: #fff;
 }
 
-.hero-offer h4,
-.hero-offer li,
-.hero-offer strong {
-  color: #fff;
-}
+.hero-offer *{ color: #fff; }
 
-.hero-offer ul {
+.hero-offer ul{
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.hero-offer li {
+.hero-offer li{
   font-size: 14.5px;
   line-height: 1.7;
 }
 
-/* ---------- Responsive tweaks ---------- */
-@media (max-width: 768px) {
-  .hero-center h1 {
+/* Responsive */
+@media (max-width: 768px){
+  .hero-center h1{
     font-size: 36px;
     letter-spacing: 6px;
   }
-
-  .hero-center p {
+  .hero-center p{
     font-size: 20px;
   }
-
-  .hero-offer {
-    font-size: 14px;
-  }
 }
+
 
 /* OLD HERO
 #hero {
