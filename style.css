@@ -1102,3 +1102,25 @@ section {
   font-size: 14px;
   line-height: 1.6;
 }
+
+
+/* Reduce huge spacing only inside hero (keeps rest of site same) */
+#hero .hero-container p{
+  margin-bottom: 18px;   /* override the 50px just for hero */
+}
+
+/* Make the offer clearly readable */
+.hero-offer{
+  background: rgba(0,0,0,0.60);  /* stronger than 0.45 */
+}
+
+/* Force offer to always appear above overlay (extra-safe) */
+#hero .hero-container,
+.hero-offer{
+  position: relative;
+  z-index: 3;
+}
+
+.hero-offer{
+  margin-bottom: 20px;  /* smaller = closer to bottom */
+}
