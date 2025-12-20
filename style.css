@@ -1084,14 +1084,14 @@ section {
   border-radius: 10px;
   border: 1px solid rgba(255,255,255,0.08);
 
-  color: #ffffff;
+  color: #fff;
 }
 
 /* Typography */
 .hero-offer h4,
 .hero-offer li,
 .hero-offer strong {
-  color: #ffffff;
+  color: #fff;
 }
 
 .hero-offer h4 {
