@@ -1054,3 +1054,39 @@ section {
   background-color: #fff;
   border-color: #ccc
 }
+
+
+
+/* ===== Hero Offer Section ===== */
+
+.hero-offer {
+  margin-top: 25px;
+  max-width: 720px;
+  text-align: center;
+  color: #e0e0e0;
+}
+
+.hero-offer h4 {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.hero-offer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-offer li {
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.hero-tagline {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #b0bec5;
+}
+
